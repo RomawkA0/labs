@@ -1,0 +1,15 @@
+def sorted_squared_array(nums):
+    return sorted([x**2 for x in nums])
+
+print(sorted_squared_array([-4, -2, 0, 1, 3]))
+print(sorted_squared_array([1, 2, 3, 4, 5]))
+
+import unittest
+
+class TestSortedSquaredArray(unittest.TestCase):
+    def test_sorted_squared_array(self):
+        self.assertEqual(sorted_squared_array([-4, -2, 0, 1, 3]), [0, 1, 4, 9, 16])
+        self.assertEqual(sorted_squared_array([1, 2, 3, 4, 5]), [1, 4, 9, 16, 25])
+
+if __name__ == '__main__':
+    unittest.main()
